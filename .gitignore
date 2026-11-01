@@ -1,0 +1,8 @@
+node_modules/
+backend/app/static/
+backend/data/
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+.DS_Store

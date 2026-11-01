@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "notional": true,
+  "note": "Illustrative command set for this project. It is not Pixxel's real command database.",
+  "commands": {
+    "ADCS_POINT_TARGET": {
+      "opcode": 100,
+      "description": "Slew to point the payload at a ground target.",
+      "params": {
+        "lat_deg": {"type": "float", "min": -90.0, "max": 90.0},
+        "lon_deg": {"type": "float", "min": -180.0, "max": 180.0}
+      }
+    },
+    "ADCS_POINT_NADIR": {
+      "opcode": 101,
+      "description": "Return to nadir pointing.",
+      "params": {}
+    },
+    "PAYLOAD_ON": {
+      "opcode": 200,
+      "description": "Power on the imaging payload (needs warm-up before imaging).",
+      "params": {}
+    },
+    "PAYLOAD_OFF": {
+      "opcode": 201,
+      "description": "Power off the imaging payload.",
+      "params": {}
+    },
+    "PAYLOAD_IMAGE": {
+      "opcode": 210,
+      "description": "Capture one strip of imagery.",
+      "params": {
+        "duration_s": {"type": "float", "min": 1.0, "max": 120.0},
+        "bandset": {"type": "int", "min": 1, "max": 4}
+      }
+    }
+  }
+}
